@@ -1,0 +1,269 @@
+
+.nav-icon {
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.nav-icon:hover {
+  color: #f97316; /* Tailwind orange-500 equivalent */
+}
+
+.text-orange {
+  color: #f97316 !important;
+}
+
+.bg-orange {
+  background-color: #f97316 !important;
+}
+
+/* ===== Cart Icon Hover Styles (Desktop) ===== */
+.nav-icon-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 30%;
+  font-weight: bold;
+}
+
+.cart-hover-box {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 250px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 10px;
+  display: none;
+}
+
+.nav-icon-wrapper:hover .cart-hover-box {
+  display: block;
+}
+
+.cart-hover-item {
+  font-size: 0.9rem;
+  padding: 4px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-hover-total {
+  font-weight: bold;
+  padding-top: 6px;
+  text-align: right;
+  color: #333;
+}
+
+/* ===== Mobile Styles ===== */
+.mobile-bottom-nav .nav-icon {
+  color: #333;
+}
+
+.mobile-bottom-nav .nav-icon.text-success {
+  color: #198754 !important; /* Bootstrap success */
+}
+
+.cart-badge {
+  font-size: 0.7rem;
+  padding: 2px 5px;
+}
+
+/* Book Now button mobile adjustments */
+.mobile-bottom-nav .btn {
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
+/* ===== Offcanvas Styles ===== */
+
+.offcanvas {
+  transition: transform 0.3s ease-in-out;
+}
+
+.offcanvas ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.offcanvas ul li {
+  margin-bottom: 12px;
+}
+
+.offcanvas ul li .nav-link {
+  display: block;
+  padding: 12px 18px;
+  color: #f8f9fa;
+  font-weight: 500;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.offcanvas ul li .nav-link:hover,
+.offcanvas ul li .nav-link:focus {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.offcanvas ul li .nav-link.active {
+  background-color: #fd7e14;
+  color: white;
+}
+
+/* Profile Section in Offcanvas */
+.offcanvas .profile-box {
+  background-color: #212529;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  color: white;
+  text-align: center;
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dark-toggle button {
+  background-color: #343a40;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.dark-toggle button:hover {
+  background-color: #495057;
+}
+/* Offcanvas width: 50% of viewport */
+.offcanvas.offcanvas-start {
+  width: 50vw !important;
+  max-width: 100%;
+}
+@media (max-width: 991.98px) {
+  .offcanvas.offcanvas-start {
+    width: 50vw !important;
+  }
+}
+.nav-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 60%;
+  font-size: 12px;
+  padding: 2px 6px;
+  z-index: 10;
+}
+
+.cart-hover-box {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  width: 250px;
+  background: #fff;
+  color: #000;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 100;
+  font-size: 14px;
+}
+
+.cart-hover-item {
+  border-bottom: 1px solid #ddd;
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+.cart-hover-total {
+  margin-top: 8px;
+  font-weight: bold;
+  text-align: right;
+}
+
+/* View Cart Button Styling */
+.view-cart-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.view-cart-btn:hover {
+  background-color: #e26100;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .cart-hover-box {
+    width: 220px;
+    right: -200px;
+    top: 40px;
+  }
+
+  .cart-hover-item {
+    font-size: 13px;
+  }
+
+  .cart-hover-total {
+    font-size: 14px;
+  }
+
+  .view-cart-btn {
+    font-size: 14px;
+    padding: 8px 10px;
+  } 
+}
+/* Navbar.css */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Navbar.css */
+.navbar img {
+  max-height: 60px;
+  object-fit: contain;
+}
+
+
+
+

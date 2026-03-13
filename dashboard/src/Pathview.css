@@ -1,0 +1,21 @@
+.path-view {
+  margin: 10px 30px;
+  font-size: 18px;
+  color: #333;
+  background-color: white;
+ font-family: 'Poppins', sans-serif;
+  border-radius: 3px;
+   padding: 4px ;
+   
+}
+.first{
+    color: orangered;
+    font-size: 20px;
+padding-top: 20px;
+}
+
+.second{
+    color: gray;
+    font-size: 14px;
+}
+

@@ -1,0 +1,24 @@
+
+.logo-container {
+  padding: 1rem;
+}
+
+.responsive-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.responsive-logo:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .responsive-logo {
+    width: 40px;
+    height: 40px;
+  }
+}

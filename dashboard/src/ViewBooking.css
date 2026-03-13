@@ -1,0 +1,13 @@
+.search-box {
+  border-radius: 20px;
+}
+
+.range-text {
+  font-weight: 500;
+  color: #555;
+}
+
+.actions svg {
+  cursor: pointer;
+  font-size: 18px;
+}

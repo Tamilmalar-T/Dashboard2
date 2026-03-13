@@ -1,0 +1,35 @@
+/* 
+*{
+  border-radius: 0 !important;
+} */
+.sidebar {
+  width: 200px;
+  min-height: 100vh;
+  
+}
+.nav-link {
+  border-radius: 0 !important; /* Removes any border radius */
+}
+
+.nav-link.active {
+  background-color:#ff6b00 !important;
+  color: black !important;
+  width: 200px;
+    border-radius: 0 !important;
+}
+
+
+.nav-link:hover {
+  color: #ffc107;
+}
+
+.maintext{
+
+  padding-left: 5px;
+}
+.dt{  
+  font-size: 14px;
+  padding-left: 30px;
+  margin-left: 20px;
+  font-weight: 400;
+}

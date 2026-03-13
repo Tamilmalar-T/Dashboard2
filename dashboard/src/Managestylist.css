@@ -1,0 +1,22 @@
+
+
+.card {
+  border-radius: 5px;
+  
+}
+
+.table th, .table td {
+  vertical-align: middle;
+
+}
+.search-box {
+  min-width: 200px;
+  max-width: 450px;
+  padding: 0px 20px;
+  border: 1px solid orangered;
+  border-radius: 0%;
+}
+
+.range-text {
+  font-weight: 500;
+}

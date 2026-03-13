@@ -1,0 +1,157 @@
+.team-section {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+
+
+
+.stylist-img {
+  width: 98%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+  height: 600px;
+}
+
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .stylist-img {
+    height: 250px;
+  }
+}
+
+.stylist-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Styling the info box */
+.stylist-info {
+  position: absolute;
+  bottom: -120px; /* matches the height */
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: orangered;
+  color: white;
+  transition: bottom 0.4s ease-in-out;
+  padding: 12px 16px;
+}
+
+
+
+
+/* Slide up on hover */
+.stylist-card:hover .stylist-info {
+  bottom: 0;
+}
+
+.stylist-card.locked-stylist {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  pointer-events: none;
+}
+
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .stylist-img {
+    height: 320px;
+  }
+
+  .stylist-info {
+    font-size: 0.95rem;
+    height: 70px;
+  }
+}
+
+/* Mobile (portrait) */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .stylist-img {
+    height: 250px;
+  }
+
+  .stylist-info {
+    height: 65px;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .stylist-img {
+    height: 300px;
+  }
+
+  .stylist-info {
+    height: 60px;
+    font-size: 0.85rem;
+  }
+}
+
+.stylist-card {
+  max-width: 350px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.stylist-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}

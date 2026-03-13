@@ -1,0 +1,36 @@
+
+
+.card {
+  border-radius: 3px;
+  padding: 20px;
+  
+
+}
+
+.table th, .table td {
+  vertical-align: middle;
+
+}
+.search-box {
+  min-width: 200px;
+  max-width: 450px;
+  padding: 10px 20px;
+  border: 1px solid orangered;
+  border-radius: 30px;
+}
+
+.range-text {
+  font-weight: 500;
+}
+
+
+/* Icon inside input */
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none; /* allow clicks to pass through */
+}

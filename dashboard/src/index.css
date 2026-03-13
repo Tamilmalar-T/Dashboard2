@@ -1,0 +1,4 @@
+/* This completely disables vertical scrolling */
+body, html {
+  overflow-y: hidden;
+}
