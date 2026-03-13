@@ -1,27 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const bookingController = require("../controllers/bookingController");
 
-const {
-  createBooking,
-  getBookings,
-  updateBookingStatus,
-  getBookingCount,
-  bulkDeleteBookings
-  
-} = require("../controllers/bookingController");
-
-router.post("/", createBooking);
-router.get("/", getBookings);
-router.put("/status/:id", updateBookingStatus);
-
-// 📌 Booking count
-router.get("/count", getBookingCount);
-  router.delete('/bulk-delete', bulkDeleteBookings);
-
-
-
-
-
-
+// Routes
+router.post("/", bookingController.createBooking);              // Create booking
+router.get("/", bookingController.getBookings);                // Get all bookings
+router.patch("/:id/status", bookingController.updateBookingStatus); // Update status
+router.get("/count", bookingController.getBookingCount);       // Get total count
+router.post("/bulk-delete", bookingController.bulkDeleteBookings); // Bulk delete
 
 module.exports = router;

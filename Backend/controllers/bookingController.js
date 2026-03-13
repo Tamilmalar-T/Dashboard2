@@ -1,5 +1,7 @@
+
 const Booking = require("../models/booking");
 
+// Create a new booking
 exports.createBooking = async (req, res) => {
   try {
     const newBooking = new Booking(req.body);
@@ -11,6 +13,7 @@ exports.createBooking = async (req, res) => {
   }
 };
 
+// Get all bookings (latest first)
 exports.getBookings = async (req, res) => {
   try {
     const bookings = await Booking.find().sort({ createdAt: -1 });
@@ -20,6 +23,7 @@ exports.getBookings = async (req, res) => {
   }
 };
 
+// Update booking status to Complete
 exports.updateBookingStatus = async (req, res) => {
   try {
     const booking = await Booking.findById(req.params.id);
@@ -39,6 +43,7 @@ exports.updateBookingStatus = async (req, res) => {
   }
 };
 
+// Get total bookings count
 exports.getBookingCount = async (req, res) => {
   try {
     const count = await Booking.countDocuments();
@@ -48,23 +53,17 @@ exports.getBookingCount = async (req, res) => {
   }
 };
 
-
-
-// controllers/bookingController.js
-
-
+// Bulk delete bookings
 exports.bulkDeleteBookings = async (req, res) => {
   const { ids } = req.body;
   if (!Array.isArray(ids) || !ids.length) {
-    return res.status(400).json({ message: 'No booking IDs provided' });
+    return res.status(400).json({ message: "No booking IDs provided" });
   }
   try {
     await Booking.deleteMany({ _id: { $in: ids } });
     res.json({ message: `Deleted ${ids.length} bookings` });
   } catch (err) {
-    console.error('Bulk delete error:', err);
-    res.status(500).json({ message: 'Server error during delete' });
+    console.error("Bulk delete error:", err);
+    res.status(500).json({ message: "Server error during delete" });
   }
 };
-
-
